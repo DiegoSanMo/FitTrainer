@@ -34,7 +34,7 @@ export const NavBar = () => {
         >
           FitTrainer
         </Typography>
-        <Stack direcction="row" spacing={2}>
+        <Stack sx={{ display: "flex", flexDirection: "row" }}>
           <Button color="inherit">DashBoard</Button>
           <Button color="inherit">Home</Button>
           <Button color="inherit">Login</Button>
