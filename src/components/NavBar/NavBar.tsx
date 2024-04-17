@@ -7,8 +7,10 @@ import {
   Button,
 } from "@mui/material/";
 import SportsGymnasticsIcon from "@mui/icons-material/SportsGymnastics";
+import { useTranslation } from 'react-i18next';
 
 export const NavBar = () => {
+  const { t } = useTranslation();
   return (
     <AppBar>
       <Toolbar disableGutters>
@@ -35,7 +37,7 @@ export const NavBar = () => {
           FitTrainer
         </Typography>
         <Stack sx={{ display: "flex", flexDirection: "row" }}>
-          <Button color="inherit">DashBoard</Button>
+          <Button color="inherit">{t('title')}</Button>
           <Button color="inherit">Home</Button>
           <Button color="inherit">Login</Button>
         </Stack>

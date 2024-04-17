@@ -1,5 +1,6 @@
 import { Container, Typography, styled } from "@mui/material";
 import landing from '../assets/landing.png';
+import { useTranslation } from "react-i18next";
 
 const StyledImage = styled('img')`
     width: 70%;
@@ -12,6 +13,7 @@ const StyledTextContainer = styled('div')`
 `
 
 export default function Landing() {
+    const { t } = useTranslation();
   return (
   <Container>
     <StyledTextContainer>
@@ -21,15 +23,13 @@ export default function Landing() {
             sx={{
                 color: '#0E0E0E',
                 }}>
-            Fit Trainer
+            {t('landing-page.title')}
         </Typography>
-
         <StyledImage src={landing} alt="landing" />
     </StyledTextContainer>
 
-
     <Typography  gutterBottom sx={{fontWeight: 300}}>
-        ¡Descubre tu paraíso fitness! Empieza tu camino hacia un tú más saludable y fuerte con nosotros. Desde entrenamientos personalizados hasta orientación de expertos, estamos aquí para apoyar tus metas. ¡Únete a nuestra comunidad vibrante y desata tu potencial hoy mismo!
+        {t('landing-page.description')}
     </Typography>
   </Container>
   )

@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HomeLayout, Plans, Workout, Customers, Register, Login, Landing, Dashboard, Error } from "./pages/index.ts";
+import { Suspense } from "react";
 
 const router = createBrowserRouter([
   {
@@ -49,12 +50,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      {/* <NavBar /> */}
-      <RouterProvider router={router}/>
-      {/* <Typography variant="h1">Welcome to My App</Typography>
-         <Button variant="contained" color="primary">Click Me</Button>   */}
-    </ThemeProvider>
+    <Suspense fallback="loading">
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router}/>
+      </ThemeProvider>
+     </Suspense>
   );
 }
 

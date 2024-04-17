@@ -1,0 +1,11 @@
+{
+  "landing-page":{
+    "title": "FitTraining",
+    "description": "Discover your fitness paradise! Start your journey towards a healthier and stronger you with us. From personalized workouts to expert guidance, we are here to support your goals. Join our vibrant community and unleash your potential today!"
+  },
+    
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english and german using buttons above."
+  }
+  }
