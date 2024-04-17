@@ -2,7 +2,7 @@ export { default as AddCustomer } from "./Customers/AddCustomer";
 export { default as Customers } from "./Customers/Customers";
 export { default as DeleteCustomer } from "./Customers/DeleteCustomer";
 export { default as EditCustomer } from "./Customers/EditCustomer";
-export { default as Error } from "./Error/Error";
+export { default as ErrorP } from "./Error/Error";
 export { default as HomeLayout } from "./HomeLayout";
 export { default as Landing } from "./Landing";
 export { default as Login } from "./Login";
