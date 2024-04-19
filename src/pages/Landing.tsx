@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Box, Typography, styled, Button, Stack } from "@mui/material";
+import { Box, Typography, styled, Button, Stack, ButtonProps } from "@mui/material";
 import landing from "../assets/landing.png";
 
 const StyledImage = styled("img")`
