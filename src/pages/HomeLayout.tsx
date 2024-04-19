@@ -1,10 +1,9 @@
-import { Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
-
+import { Box } from "@mui/material";
 export default function HomeLayout() {
   return (
-    <Container  sx={{background: '#F7F3F6', height: '100vh', width: '100vw'}}>
+    <Box component="section">
       <Outlet />
-    </Container>
-  )
+    </Box>
+  );
 }
