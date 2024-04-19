@@ -11,9 +11,10 @@ export interface CustomPalette {
     // grey:              Grey;
     // contrastThreshold: number;
     // tonalOffset:       number;
-    // text:              Text;
+    text:              Text;
     // divider:           string;
     // action:            Action;
+    accent: Text;
 }
 
 export interface Action {

@@ -11,7 +11,7 @@ export const darkMode: CustomPalette = {
   },
   secondary: {
     main: '#45a199',
-    transparent: 'rgba(198, 138, 119, 0.7)',
+    transparent: '',
     light: "",
     dark: "",
     contrastText: ""
@@ -19,6 +19,18 @@ export const darkMode: CustomPalette = {
   background: {
     default: '#060908',
     paper: ""
+  },
+  text: {
+    primary: '#f7f8f8',
+    secondary: "",
+    disabled: "",
+    icon: ""
+  },
+  accent: {
+    primary: '#ca6602',
+    secondary: "",
+    disabled: "",
+    icon: ""
   },
   common: {
       black: "",

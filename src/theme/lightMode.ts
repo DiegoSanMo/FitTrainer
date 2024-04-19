@@ -11,7 +11,7 @@ export const lightMode: CustomPalette = {
     },
     secondary: {
       main: '#5ebab3',
-      transparent: 'rgba(198, 138, 119, 0.7)',
+      transparent: '',
       light: '',
       dark: '',
       contrastText: ''
@@ -66,12 +66,18 @@ export const lightMode: CustomPalette = {
     // },
     // contrastThreshold: 0,
     // tonalOffset: 0,
-    // text: {
-    //   primary:   '',
-    //   secondary: '',
-    //   disabled:  '',
-    //   icon:      ''
-    // },
+    text: {
+      primary: '#070808',
+      secondary: "",
+      disabled: "",
+      icon: ""
+    },
+    accent: {
+      primary: '#fd9935',
+      secondary: "",
+      disabled: "",
+      icon: ""
+    }
     // divider: "",
     // action: {
     //   active:             '',

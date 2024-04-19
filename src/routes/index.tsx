@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
-import { HomeLayout, ErrorP, Landing, Register, Login, Workout, Plans, Customers, Dashboard } from "../pages";
+import { HomeLayout, ErrorP, Landing, Register, Login, Workout, Plans, Customers, Dashboard, GoogleForms } from "../pages";
 
 const ROUTER = createBrowserRouter([
     {
@@ -37,7 +37,13 @@ const ROUTER = createBrowserRouter([
           },
           {
             path: '/dashboard',
-            element: <Dashboard/>
+            element: <Dashboard/>,
+            children: [
+              {
+                index: true,
+                element: <GoogleForms/>
+              },
+            ]
           }
         ]
       },
