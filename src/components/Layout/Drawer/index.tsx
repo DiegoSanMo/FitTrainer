@@ -10,10 +10,11 @@ import Typography from '@mui/material/Typography';
 import DrawerMenuItems from './DrawerMenuItems';
 import { useTheme } from '@emotion/react';
 import { useContext } from 'react';
-import { ColorModeContext } from '../../App';
+import { ColorModeContext } from '../../../App';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import DrawerContainer from './DrawerContainer';
+import { useTranslation } from 'react-i18next';
 
 const drawerWidth = 240;
 
@@ -28,19 +29,11 @@ interface Props {
 
 export default function ResponsiveDrawer(props: Props) {
 
+  const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
-
-  const handleDrawerClose = () => {
-    setIsClosing(true);
-    setMobileOpen(false);
-  };
-
-  const handleDrawerTransitionEnd = () => {
-    setIsClosing(false);
-  };
 
   const handleDrawerToggle = () => {
     if (!isClosing) {
@@ -54,7 +47,7 @@ export default function ResponsiveDrawer(props: Props) {
       <Divider />
       <DrawerMenuItems/>
       <Divider />
-      <DrawerMenuItems/>
+      {/* <DrawerMenuItems/> */}
     </div>
   );
 
@@ -81,7 +74,7 @@ export default function ResponsiveDrawer(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            {t("dashboard-page.title")}
           </Typography>
       <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
         {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
