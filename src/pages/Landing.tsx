@@ -33,6 +33,7 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
 }));
 
 export default function Landing() {
+
   const { t } = useTranslation();
   return (
     <Box component="section">
@@ -49,7 +50,6 @@ export default function Landing() {
       </StyledTextContainer>
 
       {/* Landingpage's Paragraph */}
-
       <StyledTextContainer sx={{ position: "absolute", top: "50%" }}>
         <Typography
           align="justify"

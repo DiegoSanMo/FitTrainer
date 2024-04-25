@@ -3,8 +3,19 @@
     "title": "FitTraining",
     "description": "¡Descubre tu paraíso fitness! Empieza tu camino hacia un tú más saludable y fuerte con nosotros. Desde entrenamientos personalizados hasta orientación de expertos, estamos aquí para apoyar tus metas. ¡Únete a nuestra comunidad vibrante y desata tu potencial hoy mismo!"
   },
-    "description": {
-      "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-      "part2": "Switch language between english and german using buttons above."
-    }
+  "dashboard-page": {
+    "title": "Formularios pendientes",
+    "new-clients": "Asesorias nuevas",
+    "follow-up": "Seguimiento",
+    "excercises": "Ejercicios",
+    "clients": "Clientes",
+    "new-client": "Nuevo asesorado",
+    "new-diet": "Nueva dieta",
+    "new-workout": "Nueva rutina"
+  },
+  "customer-page": {
+    "goal-section": "Objetivo principal: ",
+    "btn-text-see-more": "Ver mas",
+    "btn-text-create-plan": "Crear plan"
   }
+}
