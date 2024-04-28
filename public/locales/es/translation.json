@@ -1,6 +1,6 @@
 {
   "landing-page":{
-    "title": "FitTraining",
+    "title": "<primary>{{- lastName}}:</primary>, <secondary>{{- firstName}}</secondary>",
     "description": "¡Descubre tu paraíso fitness! Empieza tu camino hacia un tú más saludable y fuerte con nosotros. Desde entrenamientos personalizados hasta orientación de expertos, estamos aquí para apoyar tus metas. ¡Únete a nuestra comunidad vibrante y desata tu potencial hoy mismo!"
   },
   "dashboard-page": {

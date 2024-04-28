@@ -8,7 +8,7 @@ export { default as GoogleForms } from './Customers/GoogleFormsDashboardIntegrat
 // General forlder
 export { default as ErrorP } from "./Error/Error";
 export { default as HomeLayout } from "./HomeLayout";
-export { default as Landing } from "./Landing";
+export { default as Landing } from "./Landing/Landing";
 export { default as Login } from "./Login";
 export { default as Plans } from "./Plans";
 export { default as Profile } from "./Profile";

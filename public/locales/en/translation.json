@@ -1,6 +1,9 @@
 {
   "landing-page":{
-    "title": "FitTraining",
+    "build": "Construye ",
+    "workout-routinges": "rutinas perfectas.",
+    "continues-checking": "Sigue progresos ",
+    "without-complications": "sin complicaciones.",
     "description": "¡Descubre tu paraíso fitness! Empieza tu camino hacia un tú más saludable y fuerte con nosotros. Desde entrenamientos personalizados hasta orientación de expertos, estamos aquí para apoyar tus metas. ¡Únete a nuestra comunidad vibrante y desata tu potencial hoy mismo!"
   },
   "dashboard-page": {
