@@ -1,29 +1,18 @@
-import { useTranslation } from "react-i18next";
-import {
-  Box,
-  Typography,
-  styled,
-  Button,
-  Stack,
-  ButtonProps,
-  useTheme,
-  Grid,
-} from "@mui/material";
+import { Box, Typography, Button, useTheme, Grid } from "@mui/material";
 import landing from "../../assets/landing.png";
-import { StyledGridContainer } from "./landing.styles";
 import { useNavigate } from "react-router-dom";
 import { CHILD_PATHS } from "../../utils/constants";
+import { ImageContainer } from "../../components/commons";
 
 export default function Landing() {
-  const { t } = useTranslation();
   const theme = useTheme();
 
   const navigate = useNavigate();
-  
+
   const handlerClickNav = (path: string) => navigate(path);
 
   return (
-    <StyledGridContainer container sx={{ width: "100vw", height: "100vh" }}>
+    <ImageContainer>
       <Grid item xs={8} sx={{ width: "100vw", height: "100vh" }}>
         <img
           style={{
@@ -94,9 +83,14 @@ export default function Landing() {
           >
             Sign up
           </Button>
-          <Button variant="contained" onClick={() => handlerClickNav(CHILD_PATHS.login)}>Login</Button>
+          <Button
+            variant="contained"
+            onClick={() => handlerClickNav(CHILD_PATHS.login)}
+          >
+            Login
+          </Button>
         </Box>
       </Grid>
-    </StyledGridContainer>
+    </ImageContainer>
   );
 }

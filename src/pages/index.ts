@@ -12,6 +12,6 @@ export { default as Landing } from "./Landing/Landing";
 export { default as Login } from "./Login";
 export { default as Plans } from "./Plans";
 export { default as Profile } from "./Profile";
-export { default as Register } from "./Register";
+export { default as Register } from "./Register/Register";
 export { default as Workout } from "./Workout";
 export { default as Dashboard} from './Dashboard'

@@ -1,5 +1,4 @@
 import { Box, Grid } from "@mui/material"
-import MediaCard from "../../components/Card"
 import { useEffect, useState } from "react";
 import { API_CALL_DUMMY_DATA } from '../../utils/API';
 
@@ -42,10 +41,10 @@ function GoogleFormsDashboardIntegration() {
     fetchDataAndSetState();
   }, []);
 
-  const renderCards = pendingForms?.map((form: GoogleFormsI) =><Grid key={form.respondentEmail} item xs={3}><MediaCard timestamp={form.timestamp} respondentEmail={form.respondentEmail} itemResponses={form.itemResponses}   /> </Grid>)
+  // const renderCards = pendingForms?.map((form: GoogleFormsI) =><Grid key={form.respondentEmail} item xs={3}><MediaCard timestamp={form.timestamp} respondentEmail={form.respondentEmail} itemResponses={form.itemResponses}   /> </Grid>)
   return (
     <Grid container spacing={2}>
-      {renderCards}
+      {/* {renderCards} */}
     </Grid>
   )
 }
