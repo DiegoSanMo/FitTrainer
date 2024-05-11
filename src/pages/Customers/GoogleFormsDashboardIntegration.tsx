@@ -1,6 +1,7 @@
 import { Box, Grid } from "@mui/material"
 import { useEffect, useState } from "react";
 import { API_CALL_DUMMY_DATA } from '../../utils/API';
+import CustomCard from "../../components/commons/Card/CustomCard";
 
 
 export interface GoogleFormsI {
@@ -45,6 +46,7 @@ function GoogleFormsDashboardIntegration() {
   return (
     <Grid container spacing={2}>
       {/* {renderCards} */}
+      <CustomCard></CustomCard>
     </Grid>
   )
 }
