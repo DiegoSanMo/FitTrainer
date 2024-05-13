@@ -1,5 +1,5 @@
 {
-  "landing-page":{
+  "landing-page": {
     "title": "FitTraining",
     "description": "¡Descubre tu paraíso fitness! Empieza tu camino hacia un tú más saludable y fuerte con nosotros. Desde entrenamientos personalizados hasta orientación de expertos, estamos aquí para apoyar tus metas. ¡Únete a nuestra comunidad vibrante y desata tu potencial hoy mismo!"
   },
@@ -17,5 +17,8 @@
     "goal-section": "Objetivo principal: ",
     "btn-text-see-more": "Ver mas",
     "btn-text-create-plan": "Crear plan"
+  },
+  "edit-customer": {
+    "account-detail": "Perfil"
   }
 }
