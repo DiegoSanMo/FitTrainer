@@ -25,7 +25,6 @@ export interface QuizI {
 }
 
 export default function AddCustomer() {
-  
   const location = useLocation();
   const { itemResponses, respondentEmail } = location.state;
   const [userData] = useState<QuizI[]>(itemResponses);
@@ -83,7 +82,7 @@ export default function AddCustomer() {
             sx={{ background: "white", color: "black" }}
           >
             <TextField
-              sx={{ width: "100%", height: '40px', marginTop: "15px" }}
+              sx={{ width: "100%", height: "40px", marginTop: "15px" }}
               id=""
               label={data.question}
               value={data.answer}
@@ -92,7 +91,7 @@ export default function AddCustomer() {
         </Grid>
       );
     });
-  }
+  };
 
   return (
     <Box>
@@ -125,11 +124,17 @@ export default function AddCustomer() {
           </Grid>
         </Grid>
       </Paper>
-      <Paper elevation={3} sx={{ padding: 2 }} >
+      <Paper elevation={3} sx={{ padding: 2 }}>
         <Grid sm={12} container direction={"row"} spacing={2}>
           {renderShortUserQuizAnswers()}
         </Grid>
-        <Grid sm={12} container direction={"row"} spacing={2} sx={{marginBottom: "20px"}}>
+        <Grid
+          sm={12}
+          container
+          direction={"row"}
+          spacing={2}
+          sx={{ marginBottom: "20px" }}
+        >
           {renderLongUserQuizAnswers()}
         </Grid>
       </Paper>
