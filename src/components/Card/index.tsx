@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import img from "../../assets/landing.png";
+import img from "../../assets/pika.jpg";
 import { GoogleFormsI } from "../../pages/Customers/GoogleFormsDashboardIntegration";
 import { useNavigate } from "react-router-dom";
 
@@ -37,8 +37,15 @@ export default function MediaCard({
     });
   };
   return (
-    <Card sx={{ maxWidth: 450, background: "#E8E8E8" }}>
-      <CardHeader
+    <Card
+      sx={{
+        maxWidth: 400,
+        background: "#E8E8E8",
+        borderRadius: "20px",
+      }}
+      elevation={5}
+    >
+      {/* <CardHeader
         avatar={
           <Avatar
             sx={{
@@ -50,26 +57,33 @@ export default function MediaCard({
             src={img}
           />
         }
-        // title="Blog Title"
-        // subheader="Blog Subtitle"
-      />
-      {/* <CardMedia sx={{ height: 140 }} image={img} /> */}
-      <CardContent sx={{ maxWidth: 450 }}>
-        <Typography gutterBottom variant="h5" component="div" color="primary">
-          {itemResponses[0].answer} - {itemResponses[1].answer} años
+      /> */}
+      <CardMedia sx={{ height: 140, borderRadius: "15px" }} image={img} />
+      <CardContent sx={{ maxWidth: 400 }}>
+        <Typography
+          wrap
+          gutterBottom
+          variant="h5"
+          component="div"
+          color="primary"
+        >
+          {itemResponses[0].answer.slice(0, 10)} - {itemResponses[1].answer}
+          años
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Objetivo principal: {itemResponses[2].answer}
+          Objetivo principal: {itemResponses[2].answer.trim()}
         </Typography>
         <Typography variant="body2" color="text.primary">
-          {itemResponses[3].question}: {itemResponses[3].answer}
+          {itemResponses[3].question.trim()}: {itemResponses[3].answer.trim()}
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small" onClick={goTo}>
           Ver mas
         </Button>
-        <Button size="small">Crear plan</Button>
+        <Button variant="contained" size="small" sx={{ borderRadius: "30px" }}>
+          Crear plan
+        </Button>
       </CardActions>
     </Card>
   );
