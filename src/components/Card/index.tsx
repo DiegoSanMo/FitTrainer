@@ -1,12 +1,16 @@
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import img from '../../assets/landing.png'
-import { GoogleFormsI } from '../../pages/Customers/GoogleFormsDashboardIntegration';
-import { useNavigate } from 'react-router-dom';
+import Avatar from "@mui/material/Avatar";
+import {
+  Card,
+  CardHeader,
+  CardActions,
+  CardContent,
+  CardMedia,
+} from "@mui/material";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import img from "../../assets/pika.jpg";
+import { GoogleFormsI } from "../../pages/Customers/GoogleFormsDashboardIntegration";
+import { useNavigate } from "react-router-dom";
 
 /**
  * TODO
@@ -17,35 +21,69 @@ import { useNavigate } from 'react-router-dom';
  * content -> child prop
  * header card section -> react node and add a default functionality that could be a cardMedia component
  * a prop to changes the card style
- * 
- * @returns 
+ *
+ * @returns
  */
-export default function MediaCard( { timestamp, respondentEmail, itemResponses}: GoogleFormsI) {
+export default function MediaCard({
+  timestamp,
+  respondentEmail,
+  itemResponses,
+}: GoogleFormsI) {
   const navigate = useNavigate();
-  
+
   const goTo = () => {
-    navigate("./customer", {state:{timestamp, respondentEmail, itemResponses}})
-  }
+    navigate("./customer", {
+      state: { timestamp, respondentEmail, itemResponses },
+    });
+  };
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image={img}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div" color='primary'>
-          {itemResponses[0].answer} - {itemResponses[1].answer} anios
+    <Card
+      sx={{
+        maxWidth: 400,
+        background: "#E8E8E8",
+        borderRadius: "20px",
+      }}
+      elevation={5}
+    >
+      {/* <CardHeader
+        avatar={
+          <Avatar
+            sx={{
+              height: 150,
+              width: 150,
+              left: "50%",
+              align: "center",
+            }}
+            src={img}
+          />
+        }
+      /> */}
+      <CardMedia sx={{ height: 140, borderRadius: "15px" }} image={img} />
+      <CardContent sx={{ maxWidth: 400 }}>
+        <Typography
+          wrap
+          gutterBottom
+          variant="h5"
+          component="div"
+          color="primary"
+        >
+          {itemResponses[0].answer.slice(0, 10)} - {itemResponses[1].answer}
+          años
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Objetivo principal: {itemResponses[2].answer}
+          Objetivo principal: {itemResponses[2].answer.trim()}
         </Typography>
         <Typography variant="body2" color="text.primary">
-        {itemResponses[3].question}: {itemResponses[3].answer}
+          {itemResponses[3].question.trim()}: {itemResponses[3].answer.trim()}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={goTo}>Ver mas</Button>
-        <Button size="small">Crear plan</Button>
+        <Button size="small" onClick={goTo}>
+          Ver mas
+        </Button>
+        <Button variant="contained" size="small" sx={{ borderRadius: "30px" }}>
+          Crear plan
+        </Button>
       </CardActions>
     </Card>
   );
